@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= stylesheet type="text/css" href= "/css/sucesso.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastrado realizado com sucesso!</h1>
+        <div id="data">
+            <h3>Dados:</h3>
+            <% if (Values[3] == "Usuario") { %>
+            <label for="nome">Nome:</label>
+            <p name="nome"><%= Values[0] %></p>
+            <label for="email">Email:</label>
+            <p name="email"><%= Values[1] %></p>
+            <label for="telefone">Telefone:</label>
+            <p name="telefone"><%= Values[2] %></p>
+
+            <% } else if(Values[3] == "Produto") {%>
+                <label for="nome">Nome:</label>
+                <p name="nome"><%= Values[0] %></p>
+                <label for="preco">Preço:</label>
+                <p name="preco"><%= Values[1] %></p>
+                <label for="descricao">Descrição:</label>
+                <p name="descricao"><%= Values[2] %></p>
+
+            <% } else {%>
+                <label for="nome">Nome:</label>
+                <p name="nome"><%= Values[0] %></p>
+                <label for="cargo">Cargo:</label>
+                <p name="cargo"><%= Values[1] %></p>
+                <label for="cpf">CPF:</label>
+                <p name="cpf"><%= Values[2] %></p>
+
+            <% } %>
+            <button><a href="/">Voltar</a></button>
+        </div>
+       
+    </div>
+</body>
+</html>
